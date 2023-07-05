@@ -1,7 +1,24 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+# Department Sample Dataset
+department = Department.create(
+  user_id: 1,
+  depart_name: "CNC",
+  depart_manager: "Joe",
+)
+
+department = Department.create(
+  user_id: 1,
+  depart_name: "Heat Treat",
+  depart_manager: "Jane",
+)
+
+department = Department.create(
+  user_id: 1,
+  depart_name: "Plating",
+  depart_manager: "Jason",
+)
+
+department = Department.create(
+  user_id: 1,
+  depart_name: "Cold Heading",
+  depart_manager: "Jake",
+)
