@@ -28,4 +28,10 @@ class DepartmentsController < ApplicationController
     )
     render :show
   end
+
+  def destroy
+    @department = Department.find_by(id: params[:id])
+    @department.destroy
+    render json: { message: "department removed from list" }
+  end
 end

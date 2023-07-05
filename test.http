@@ -17,3 +17,6 @@ Content-Type: application/json
   "depart_name": "test name",
   "depart_manager": "test"
 }
+
+### Department Delete Test
+DELETE http://localhost:3000/departments/5.json
