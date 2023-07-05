@@ -18,4 +18,14 @@ class DepartmentsController < ApplicationController
     @department.save
     render :show
   end
+
+  def update
+    @department = Department.find_by(id: params[:id])
+    @department.update(
+      user_id: params[:user_id] || @department.id,
+      depart_name: params[:depart_name] || @department.depart_name,
+      depart_manager: params[:depart_manager] || @department.depart_manager,
+    )
+    render :show
+  end
 end

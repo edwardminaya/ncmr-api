@@ -7,3 +7,13 @@ Content-Type: application/json
   "depart_name": "test name",
   "depart_manager": "test"
 }
+
+### Department Update Test
+PATCH http://localhost:3000/departments/5.json
+Content-Type: application/json
+
+{
+  "user_id": 1, 
+  "depart_name": "test name",
+  "depart_manager": "test"
+}
