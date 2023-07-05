@@ -11,6 +11,19 @@ Content-Type: application/json
   "admin": true
 }
 
+### User Login add JWT in response message to variable below
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "123"
+}
+
+### JWT Variables
+@jwt = 
+@jwt_admin = 
+
 ### Department Create Test
 POST http://localhost:3000/departments.json
 Content-Type: application/json
