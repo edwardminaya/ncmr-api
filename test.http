@@ -1,3 +1,16 @@
+### User Create Test
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "test",
+  "email": "test@test.com",
+  "password": "123",
+  "password_confirmation": "123",
+  "title": "test title",
+  "admin": true
+}
+
 ### Department Create Test
 POST http://localhost:3000/departments.json
 Content-Type: application/json
