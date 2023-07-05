@@ -1,0 +1,9 @@
+### Department Create Test
+POST http://localhost:3000/departments.json
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "depart_name": "test name",
+  "depart_manager": "test"
+}
