@@ -35,27 +35,63 @@ user = User.create(
   admin: true,
 )
 
+user = User.create(
+  name: "Joe",
+  email: "joe@test.com",
+  password: "123",
+  password_confirmation: "123",
+  title: "CNC Department Manager",
+  admin: true,
+)
+
+user = User.create(
+  name: "Jane",
+  email: "jane@test.com",
+  password: "123",
+  password_confirmation: "123",
+  title: "Heat Treat Department Manager",
+  admin: true,
+)
+
+user = User.create(
+  name: "Jason",
+  email: "jason@test.com",
+  password: "123",
+  password_confirmation: "123",
+  title: "Plating & Coating Department Manager",
+  admin: true,
+)
+
+user = User.create(
+  name: "Jake",
+  email: "jake@test.com",
+  password: "123",
+  password_confirmation: "123",
+  title: "Cold Heading Department Manager",
+  admin: true,
+)
+
 # Department Sample Dataset
 department = Department.create(
   user_id: 1,
   depart_name: "CNC",
-  depart_manager: "Joe",
+  manager_id: 5,
 )
 
 department = Department.create(
   user_id: 1,
   depart_name: "Heat Treat",
-  depart_manager: "Jane",
+  manager_id: 6,
 )
 
 department = Department.create(
   user_id: 1,
   depart_name: "Plating",
-  depart_manager: "Jason",
+  manager_id: 7,
 )
 
 department = Department.create(
   user_id: 1,
   depart_name: "Cold Heading",
-  depart_manager: "Jake",
+  manager_id: 8,
 )
