@@ -95,3 +95,40 @@ department = Department.create(
   depart_name: "Cold Heading",
   manager_id: 8,
 )
+
+# Product Sample Dataset
+
+product = Product.create(
+  user_id: 1,
+  product_name: "anvil plate",
+  product_sku: "P4609",
+  product_class: "TOOL",
+)
+
+product = Product.create(
+  user_id: 1,
+  product_name: "ejector",
+  product_sku: "P2456",
+  product_class: "TOOL",
+)
+
+product = Product.create(
+  user_id: 1,
+  product_name: "bolt 1/4 inch",
+  product_sku: "C0045",
+  product_class: "BOLT",
+)
+
+product = Product.create(
+  user_id: 1,
+  product_name: "bolt 1/2 inch",
+  product_sku: "C0098",
+  product_class: "BOLT",
+)
+
+product = Product.create(
+  user_id: 1,
+  product_name: "face plate",
+  product_sku: "P4567",
+  product_class: "LINK",
+)

@@ -22,10 +22,11 @@ Content-Type: application/json
 
 ### JWT Variables
 @jwt = 
-@jwt_admin = 
+@jwt_admin = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5LCJleHAiOjE2ODk4MDE2Nzd9.Gy-eDbJtz4vI0-aXf5zp4QF_gnWOEnmz_HM-jiHaRJk
 
 ### Department Create Test
 POST http://localhost:3000/departments.json
+Authorization: Bearer {{jwt_admin}}
 Content-Type: application/json
 
 {
@@ -35,6 +36,7 @@ Content-Type: application/json
 
 ### Department Update Test
 PATCH http://localhost:3000/departments/5.json
+Authorization: Bearer {{jwt_admin}}
 Content-Type: application/json
 
 {
@@ -46,3 +48,31 @@ Content-Type: application/json
 ### Department Delete Test
 DELETE http://localhost:3000/departments/5.json
 Authorization: Bearer {{jwt_admin}}
+
+### Product Create Test
+POST http://localhost:3000/products.json
+Authorization: Bearer {{jwt_admin}}
+Content-Type: application/json
+
+{
+  "product_name": "test product",
+  "product_sku": "Test",
+  "product_class": "test class"
+}
+
+### Product Update Test
+PATCH http://localhost:3000/products/6.json
+Authorization: Bearer {{jwt_admin}}
+Content-Type: application/json
+
+{
+  "product_name": "update test product",
+  "product_sku": "update test",
+  "product_class": "update test class"
+}
+
+### Product Delete Test
+DELETE http://localhost:3000/products/6.json
+Authorization: Bearer {{jwt_admin}}
+
+
