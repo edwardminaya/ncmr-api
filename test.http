@@ -29,9 +29,8 @@ POST http://localhost:3000/departments.json
 Content-Type: application/json
 
 {
-  "user_id": 1,
-  "depart_name": "test name",
-  "depart_manager": "test"
+  "depart_name": "test sdfname",
+  "manager_id": 1
 }
 
 ### Department Update Test
@@ -41,8 +40,9 @@ Content-Type: application/json
 {
   "user_id": 1, 
   "depart_name": "test name",
-  "depart_manager": "test"
+  "manager_id": 10
 }
 
 ### Department Delete Test
 DELETE http://localhost:3000/departments/5.json
+Authorization: Bearer {{jwt_admin}}

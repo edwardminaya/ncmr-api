@@ -11,9 +11,9 @@ class DepartmentsController < ApplicationController
 
   def create
     @department = Department.new(
-      user_id: params[:user_id], # Later change to current_user.id
+      user_id: current_user.id,
       depart_name: params[:depart_name],
-      depart_manager: params[:depart_manager],
+      manager_id: params[:manager_id],
     )
     @department.save
     render :show
@@ -22,9 +22,8 @@ class DepartmentsController < ApplicationController
   def update
     @department = Department.find_by(id: params[:id])
     @department.update(
-      user_id: params[:user_id] || @department.id,
       depart_name: params[:depart_name] || @department.depart_name,
-      depart_manager: params[:depart_manager] || @department.depart_manager,
+      manager_id: params[:manager_id] || @department.manager_id,
     )
     render :show
   end
